@@ -1,0 +1,63 @@
+{% extends 'web/base.html' %}
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <div class="container-fluid ">
+        <div class="row">
+            {% for Infoo in all_infos %}
+
+
+                <div class="col-md-3 col-md-offset-3">
+                    <h1 style="color:red">
+                        {{ Infoo.Name}}
+                    </h1>
+                    <h2>
+                        <ul id="infoo">
+                            <li>
+                                {{ Infoo.Designation }}
+                            </li>
+                            <li>
+                                IIT Guwahati, Guwahati- 781039
+
+                            </li>
+                            <li>
+                                Assam ,India
+                            </li>
+                        </ul>
+                    </h2>
+                </div>
+                <div class="col-md-3">
+                    <h1 style="color:red">
+                        OFFICE
+                    </h1>
+                    <h2>
+                        <ul id="infoo">
+                            <li>
+                                {{ Infoo.room }}
+                            </li>
+                            <li>
+                                Phone:{{ Infoo.Phone }}
+                            </li>
+                            <li>
+                                Email :{{ Infoo.webmail }}@iitg.ernet.in
+                            </li>
+                        </ul>
+                    </h2>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <h1 style="color:red">
+                        Residence
+                    </h1>
+                    <h2>
+                        <ul id="info">
+                            <li>
+                                {{ Infoo.residence }}
+                            </li>
+
+                        </ul>
+                    </h2>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

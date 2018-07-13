@@ -1,0 +1,16 @@
+{% extends 'web/base.html' %}
+{% block title %}Publications{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <ul>
+            {% for recognition in all_recg %}
+                <li>
+                    {{ recognition.recg }}
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

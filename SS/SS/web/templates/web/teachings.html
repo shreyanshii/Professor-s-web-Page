@@ -1,0 +1,29 @@
+{% extends 'web/base.html %}
+{% block title %} Teachings {% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="table responsive"
+            <table class="table table-striped-hover">
+                <thead>
+                    <tr>
+                        <th class="col-md-2"> Year</th>
+                        <th> Semester</th>
+                        <th> Course</th>
+                    </tr>
+                </thead>
+                {% for teaching in all_teachings %}
+                    <tbody>
+                    <tr>
+                        <td>
+                            {{teaching.year}}
+                        </td>
+                        <td> {{teaching. sem}}</td>
+                        <td> {{teaching.course}}</td>
+                    </tr>
+                    </tbody>
+                {%end for %}
+            </table>
+        </div>
+    </div>
+

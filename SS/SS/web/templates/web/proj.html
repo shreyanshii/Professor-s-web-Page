@@ -1,0 +1,27 @@
+{% extends 'web/base.html' %}
+{% block title %}Projects{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <h2>Sponsored Research Projects</h2>
+            {% for project in all_proj %}
+            <div class="col">
+                <h10>Project title: "{{ project.title }}"</h10>
+                <br>
+                <h10>PI: "{{ project.pi }}"</h10>
+                <br>
+                <h10>Funding Agency: "{{ project.agency }}"</h10>
+                <br>
+                <h10>Start Year: "{{ project.startyear }}"</h10>
+                <br>
+                <h10>End Year: "{{ project.endyear }}"</h10>
+                <br>
+            </div>
+            <br>
+            <br>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}
